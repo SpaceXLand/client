@@ -10,7 +10,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h3>Welcome to SpaceX Land 🚀</h3>
           <p>A non official platform for SpaceX's data!</p>
-          <span>Coming soon... 👀</span>
+          <span>Landing soon... 👀</span>
           <a
             className="App-link"
             href="https://api.spacex.land"
