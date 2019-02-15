@@ -15,7 +15,8 @@ export default function Launch({
     data: {
       launch: { name, date, details, success, rocket, links }
     },
-    error
+    error,
+    loading
   } = useQuery<GetLaunch.Query, GetLaunch.Variables>(query, {
     variables: {
       id
@@ -24,6 +25,8 @@ export default function Launch({
 
   return error ? (
     <span>{error.message}</span>
+  ) : loading ? (
+    <span>Loading...</span>
   ) : (
     <Container>
       <h2>🛰 {name}</h2>

@@ -43,7 +43,7 @@ function Launches({ classes, match }: Props & RouteComponentProps) {
         />
       </div>
       <ContainerLaunches>
-        <Suspense fallback={null}>
+        <Suspense fallback="Loading...">
           <LaunchesList
             name={name}
             limit={limit}
