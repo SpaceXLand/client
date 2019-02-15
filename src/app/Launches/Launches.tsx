@@ -51,20 +51,20 @@ function Launches({ classes, match }: Props & RouteComponentProps) {
             match={match}
             setTotalCount={setTotalCount}
           />
+          <div>
+            {!!totalCount && (
+              <ReactPaginate
+                previousLabel={'<'}
+                nextLabel={'>'}
+                pageCount={Math.ceil(totalCount / limit)}
+                onPageChange={({ selected }) => setOffset(selected * limit)}
+                activeClassName={'active'}
+              />
+            )}
+            <span>Total count: {totalCount}</span>
+          </div>
         </Suspense>
       </ContainerLaunches>
-      <div>
-        {!!totalCount && (
-          <ReactPaginate
-            previousLabel={'<'}
-            nextLabel={'>'}
-            pageCount={Math.ceil(totalCount / limit)}
-            onPageChange={({ selected }) => setOffset(selected * limit)}
-            activeClassName={'active'}
-          />
-        )}
-        <span>Total count: {totalCount}</span>
-      </div>
     </Container>
   );
 }
