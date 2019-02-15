@@ -9,7 +9,8 @@ export default function Launches({
   name,
   limit,
   offset,
-  match
+  match,
+  setTotalCount
 }: RouteComponentProps & any) {
   const {
     data: {
@@ -26,6 +27,8 @@ export default function Launches({
       offset
     }
   });
+
+  setTotalCount(totalCount);
 
   return error ? (
     <span>{error.message}</span>

@@ -49,10 +49,11 @@ function Launches({ classes, match }: Props & RouteComponentProps) {
             limit={limit}
             offset={offset}
             match={match}
+            setTotalCount={setTotalCount}
           />
         </Suspense>
       </ContainerLaunches>
-      {/* {!!totalCount && (
+      {!!totalCount && (
         <div>
           <ReactPaginate
             previousLabel={'<'}
@@ -63,7 +64,7 @@ function Launches({ classes, match }: Props & RouteComponentProps) {
           />
           <span>Total count: {totalCount}</span>
         </div>
-      )} */}
+      )}
     </Container>
   );
 }
