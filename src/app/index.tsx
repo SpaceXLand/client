@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Router, Route, Redirect, Switch } from 'react-router-dom';
-import Launches from './Launches/Launches';
-import Launch from './Launches/Launch';
-import Home from './Home/Home';
-import history from '../utils/history';
+import { Route, Redirect, Switch } from 'react-router-dom';
+const Launches = React.lazy(() => import('./Launches/Launches'));
+const Launch = React.lazy(() => import('./Launches/Launch'));
+const Home = React.lazy(() => import('./Home/Home'));
 
 const RedirectToHome = () => <Redirect to="/" />;
 
