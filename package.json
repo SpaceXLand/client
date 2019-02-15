@@ -10,17 +10,9 @@
     "eject": "react-scripts eject",
     "generate": "gql-gen"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/spacexland/client"
-  },
   "keywords": [],
   "author": "Carlos Rufo",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/spacexland/client/issues"
-  },
-  "homepage": "https://github.com/spacexland/client",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
