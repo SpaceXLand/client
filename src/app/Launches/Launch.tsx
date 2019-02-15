@@ -5,12 +5,19 @@ import { GetLaunch, GetLaunches } from '../../types/types';
 import { RouteComponentProps } from 'react-router-dom';
 import Slider from 'react-slick';
 import styled from 'styled-components';
+import Image from '../Common/Image';
+import { Stage, Layer } from 'react-konva';
+import useComponentSize from '@rehooks/component-size';
 
 export default function Launch({
   match: {
     params: { id }
   }
 }: RouteComponentProps<{ id: string }>) {
+  const [loadingImg, setLoadingImg] = React.useState('');
+  let ref = React.useRef(null);
+  let size = useComponentSize(ref);
+  console.log('loadingImg: ', loadingImg);
   const {
     data: {
       launch: { name, date, details, success, rocket, links }
@@ -22,6 +29,9 @@ export default function Launch({
       id
     }
   });
+
+  let { width, height } = size;
+  console.log('width: ', width);
 
   return error ? (
     <span>{error.message}</span>
@@ -35,11 +45,23 @@ export default function Launch({
       </h4>
       <Details>{details}</Details>
       <h5>Success {success ? '✅' : '❌'}</h5>
-      <SliderStyled {...settings}>
-        {links.images.map((src, index) => (
-          <img key={index} src={src} />
-        ))}
-      </SliderStyled>
+      <div
+        style={{
+          display: loadingImg ? 'none' : 'block',
+          width: '100%'
+        }}
+        ref={ref}
+      >
+        <SliderStyled {...settings}>
+          {links.images.map((src, index) => (
+            <Stage width={window.innerWidth} height={window.innerHeight}>
+              <Layer>
+                <Image src={src} setLoadingImg={setLoadingImg} {...size} />
+              </Layer>
+            </Stage>
+          ))}
+        </SliderStyled>
+      </div>
     </Container>
   );
 }
@@ -81,5 +103,6 @@ const Details = styled.p`
 const SliderStyled = styled(Slider)`
   .slick-list {
     height: 300px;
+    width: 500px;
   }
 `;
