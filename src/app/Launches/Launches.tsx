@@ -53,8 +53,8 @@ function Launches({ classes, match }: Props & RouteComponentProps) {
           />
         </Suspense>
       </ContainerLaunches>
-      {!!totalCount && (
-        <div>
+      <div>
+        {!!totalCount && (
           <ReactPaginate
             previousLabel={'<'}
             nextLabel={'>'}
@@ -62,9 +62,9 @@ function Launches({ classes, match }: Props & RouteComponentProps) {
             onPageChange={({ selected }) => setOffset(selected * limit)}
             activeClassName={'active'}
           />
-          <span>Total count: {totalCount}</span>
-        </div>
-      )}
+        )}
+        <span>Total count: {totalCount}</span>
+      </div>
     </Container>
   );
 }
