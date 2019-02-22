@@ -795,9 +795,9 @@
   version "10.12.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.24.tgz#b13564af612a22a20b5d95ca40f1bffb3af315cf"
 
-"@types/node@10.12.26":
-  version "10.12.26"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.26.tgz#2dec19f1f7981c95cb54bab8f618ecb5dc983d0e"
+"@types/node@10.12.27":
+  version "10.12.27"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.27.tgz#eb3843f15d0ba0986cc7e4d734d2ee8b50709ef8"
 
 "@types/prop-types@*":
   version "15.5.8"
