@@ -22,6 +22,32 @@ It was never easier to create & share 💯web application projects using your fa
 
 Pick whichever programming language & the FE library you feel confident with, schedule some ⏳in your agenda & enjoy coding 👌webapps!
 
+## Installation
+
+**Init client**
+
+```bash
+yarn # npm install
+yarn start # npm run dev
+```
+
+**Generate types**
+
+```bash
+yarn generate # npm run generate
+```
+
+## Contribute
+
+There are many ways to [contribute](https://github.com/spacexland/client/blob/master/CONTRIBUTING.md) to SpaceX Land API.
+
+- [Submit bugs](https://github.com/spacexland/client/issues) and help us verify fixes as they are checked in.
+- Review the [source code changes](https://github.com/spacexland/client/pulls).
+- Engage with other users and developers on [Spectrum](https://spectrum.chat/spacexland).
+- [Contribute bug fixes](https://github.com/spacexland/client/blob/master/CONTRIBUTING.md).
+
+This project has adopted the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct.md).
+
 ## Help & Community
 
 Join our [Spectrum community](https://spectrum.chat/spacexland) if you run into issues or have questions. We love talking to you!
