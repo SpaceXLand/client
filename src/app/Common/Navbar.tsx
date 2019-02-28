@@ -39,7 +39,7 @@ function Navbar(props: Props & RouteComponentProps) {
             noWrap
             onClick={() => history.push('/')}
           >
-            SpaceX Land
+            Home
           </Typography>
           <Typography
             className={classes.title}
