@@ -68,6 +68,15 @@ function Navbar(props: Props & RouteComponentProps) {
           >
             🎯 Missions
           </Typography>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            color="inherit"
+            noWrap
+            onClick={() => history.push('/ships')}
+          >
+            ⛴ Ships
+          </Typography>
           <div className={classes.grow} />
         </Toolbar>
       </AppBar>
