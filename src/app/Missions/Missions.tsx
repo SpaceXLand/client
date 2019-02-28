@@ -4,7 +4,6 @@ import { useQuery } from 'react-apollo-hooks';
 import { GetMissions } from '../../types/types';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
-import { mock } from './mocks';
 
 export default function Missions({
   name,
