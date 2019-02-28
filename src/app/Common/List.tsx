@@ -17,10 +17,11 @@ import ReactPaginate from 'react-paginate';
 export interface Props extends WithStyles<typeof styles> {}
 
 const limit = 5;
-function Launches({
+function List({
   classes,
   match,
-  children
+  children,
+  noSearch = false
 }: Props & RouteComponentProps & { children: any } | any) {
   const [name, setName] = useState('');
   const [offset, setOffset] = useState(0);
@@ -30,20 +31,24 @@ function Launches({
   return (
     <Container>
       <div className={classes.search}>
-        <div className={classes.searchIcon}>
-          <SearchIcon />
-        </div>
-        <InputBase
-          placeholder="Search…"
-          onChange={event => {
-            setOffset(0);
-            setNameDebounced(event.target.value);
-          }}
-          classes={{
-            root: classes.inputRoot,
-            input: classes.inputInput
-          }}
-        />
+        {!noSearch && (
+          <React.Fragment>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Search…"
+              onChange={event => {
+                setOffset(0);
+                setNameDebounced(event.target.value);
+              }}
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput
+              }}
+            />
+          </React.Fragment>
+        )}
       </div>
       <ContainerLaunches>
         <Suspense fallback="Loading...">
@@ -126,4 +131,4 @@ const styles = (theme: Theme) =>
     }
   });
 
-export default withStyles(styles)(Launches);
+export default withStyles(styles)(List);
