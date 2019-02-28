@@ -3,6 +3,8 @@ import { Route, Redirect, Switch, RouteComponentProps } from 'react-router-dom';
 import List from './Common/List';
 const Launches = React.lazy(() => import('./Launches/Launches'));
 const Launch = React.lazy(() => import('./Launches/Launch'));
+const Rockets = React.lazy(() => import('./Rockets/Rockets'));
+const Rocket = React.lazy(() => import('./Rockets/Rocket'));
 const Missions = React.lazy(() => import('./Missions/Missions'));
 const Mission = React.lazy(() => import('./Missions/Mission'));
 const Home = React.lazy(() => import('./Home/Home'));
@@ -22,6 +24,16 @@ export default () => (
       )}
     />
     <Route exact path="/launches/:id" component={Launch} />
+    <Route
+      exact
+      path="/rockets"
+      render={({ match }): RouteComponentProps | any => (
+        <List {...{ match }} noSearch>
+          <Rockets />
+        </List>
+      )}
+    />
+    <Route exact path="/rockets/:id" component={Rocket} />
     <Route
       exact
       path="/missions"

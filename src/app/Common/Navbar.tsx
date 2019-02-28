@@ -39,7 +39,7 @@ function Navbar(props: Props & RouteComponentProps) {
             noWrap
             onClick={() => history.push('/')}
           >
-            Home
+            🏡 Home
           </Typography>
           <Typography
             className={classes.title}
@@ -48,7 +48,16 @@ function Navbar(props: Props & RouteComponentProps) {
             noWrap
             onClick={() => history.push('/launches')}
           >
-            Launches
+            🛰 Launches
+          </Typography>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            color="inherit"
+            noWrap
+            onClick={() => history.push('/rockets')}
+          >
+            🚀 Rockets
           </Typography>
           <Typography
             className={classes.title}
@@ -57,7 +66,7 @@ function Navbar(props: Props & RouteComponentProps) {
             noWrap
             onClick={() => history.push('/missions')}
           >
-            Missions
+            🎯 Missions
           </Typography>
           <div className={classes.grow} />
         </Toolbar>
