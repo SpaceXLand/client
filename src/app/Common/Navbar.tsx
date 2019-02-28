@@ -37,8 +37,27 @@ function Navbar(props: Props & RouteComponentProps) {
             variant="h6"
             color="inherit"
             noWrap
+            onClick={() => history.push('/')}
           >
             SpaceX Land
+          </Typography>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            color="inherit"
+            noWrap
+            onClick={() => history.push('/launches')}
+          >
+            Launches
+          </Typography>
+          <Typography
+            className={classes.title}
+            variant="h6"
+            color="inherit"
+            noWrap
+            onClick={() => history.push('/missions')}
+          >
+            Missions
           </Typography>
           <div className={classes.grow} />
         </Toolbar>
@@ -64,10 +83,12 @@ const styles = (theme: Theme) =>
       marginRight: 20
     },
     title: {
+      margin: '0 10px',
       display: 'none',
       [theme.breakpoints.up('sm')]: {
         display: 'block'
-      }
+      },
+      cursor: 'pointer'
     },
     search: {
       position: 'relative',
