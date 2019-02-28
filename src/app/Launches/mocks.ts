@@ -5,7 +5,7 @@ export const mock = {
     launchesPastResult: {
       data: [...Array(5)].map((_, id) => ({
         id,
-        mission_name: `Mission ${id}`
+        mission_name: `Launch ${id}`
       })),
       result: { totalCount }
     }
