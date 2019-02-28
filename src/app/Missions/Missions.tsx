@@ -38,7 +38,7 @@ export default function Missions({
     <Container>
       {data.map(({ id, name }) => (
         <div key={id}>
-          <LinkStyled to={`${match.path}/${id}`}>🛰 {name}</LinkStyled>
+          <LinkStyled to={`${match.path}/${id}`}>🎯 {name}</LinkStyled>
         </div>
       ))}
     </Container>

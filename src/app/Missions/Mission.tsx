@@ -29,7 +29,7 @@ export default function Mission({
     <span>Loading...</span>
   ) : (
     <Container>
-      <h2>🛰 {name}</h2>
+      <h2>🎯 {name}</h2>
       <Details>{description}</Details>
     </Container>
   );
