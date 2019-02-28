@@ -1,7 +1,7 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
-import { GetLaunches, GetLaunch } from '../../types/types';
+import { GetRockets } from '../../types/types';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import { mock } from './mocks';
@@ -21,13 +21,12 @@ export default function Launches({
       }
     },
     error
-  } = mock;
-  // useQuery<GetRockets.Query, GetRockets.Variables>(query, {
-  //   variables: {
-  //     limit,
-  //     offset
-  //   }
-  // });
+  } = useQuery<GetRockets.Query, GetRockets.Variables>(query, {
+    variables: {
+      limit,
+      offset
+    }
+  });
 
   setTotalCount(totalCount);
 
@@ -45,7 +44,7 @@ export default function Launches({
 }
 
 const query = gql`
-  query getLaunches($name: String, $limit: Int, $offset: Int) {
+  query getRockets($limit: Int, $offset: Int) {
     rocketsResult(limit: $limit, offset: $offset) {
       result {
         totalCount

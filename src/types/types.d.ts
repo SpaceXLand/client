@@ -357,3 +357,180 @@ export namespace GetLaunches {
     mission_name: Maybe<string>;
   };
 }
+
+export namespace GetMission {
+  export type Variables = {
+    id: string;
+  };
+
+  export type Query = {
+    __typename?: "Query";
+
+    mission: Maybe<Mission>;
+  };
+
+  export type Mission = {
+    __typename?: "Mission";
+
+    name: Maybe<string>;
+
+    description: Maybe<string>;
+
+    manufacturers: Maybe<(Maybe<string>)[]>;
+
+    twitter: Maybe<string>;
+
+    website: Maybe<string>;
+
+    wikipedia: Maybe<string>;
+  };
+}
+
+export namespace GetMissions {
+  export type Variables = {
+    name?: Maybe<string>;
+    limit?: Maybe<number>;
+    offset?: Maybe<number>;
+  };
+
+  export type Query = {
+    __typename?: "Query";
+
+    missionsResult: Maybe<MissionsResult>;
+  };
+
+  export type MissionsResult = {
+    __typename?: "MissionResult";
+
+    result: Maybe<Result>;
+
+    data: Maybe<(Maybe<Data>)[]>;
+  };
+
+  export type Result = {
+    __typename?: "Result";
+
+    totalCount: Maybe<number>;
+  };
+
+  export type Data = {
+    __typename?: "Mission";
+
+    id: Maybe<string>;
+
+    name: Maybe<string>;
+  };
+}
+
+export namespace GetRocket {
+  export type Variables = {
+    id: string;
+  };
+
+  export type Query = {
+    __typename?: "Query";
+
+    rocket: Maybe<Rocket>;
+  };
+
+  export type Rocket = {
+    __typename?: "Rocket";
+
+    name: Maybe<string>;
+
+    description: Maybe<string>;
+  };
+}
+
+export namespace GetRockets {
+  export type Variables = {
+    limit?: Maybe<number>;
+    offset?: Maybe<number>;
+  };
+
+  export type Query = {
+    __typename?: "Query";
+
+    rocketsResult: Maybe<RocketsResult>;
+  };
+
+  export type RocketsResult = {
+    __typename?: "RocketsResult";
+
+    result: Maybe<Result>;
+
+    data: Maybe<(Maybe<Data>)[]>;
+  };
+
+  export type Result = {
+    __typename?: "Result";
+
+    totalCount: Maybe<number>;
+  };
+
+  export type Data = {
+    __typename?: "Rocket";
+
+    id: Maybe<string>;
+
+    name: Maybe<string>;
+  };
+}
+
+export namespace GetShip {
+  export type Variables = {
+    id: string;
+  };
+
+  export type Query = {
+    __typename?: "Query";
+
+    ship: Maybe<Ship>;
+  };
+
+  export type Ship = {
+    __typename?: "Ship";
+
+    name: Maybe<string>;
+
+    port: Maybe<string>;
+
+    image: Maybe<string>;
+  };
+}
+
+export namespace GetShips {
+  export type Variables = {
+    name?: Maybe<string>;
+    limit?: Maybe<number>;
+    offset?: Maybe<number>;
+  };
+
+  export type Query = {
+    __typename?: "Query";
+
+    shipsResult: Maybe<ShipsResult>;
+  };
+
+  export type ShipsResult = {
+    __typename?: "ShipsResult";
+
+    result: Maybe<Result>;
+
+    data: Maybe<(Maybe<Data>)[]>;
+  };
+
+  export type Result = {
+    __typename?: "Result";
+
+    totalCount: Maybe<number>;
+  };
+
+  export type Data = {
+    __typename?: "Ship";
+
+    id: Maybe<string>;
+
+    name: Maybe<string>;
+  };
+}

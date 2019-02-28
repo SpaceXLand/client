@@ -1,7 +1,7 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from 'react-apollo-hooks';
-import { GetLaunch, GetLaunches } from '../../types/types';
+import { GetMission } from '../../types/types';
 import { RouteComponentProps } from 'react-router-dom';
 import Slider from 'react-slick';
 import styled from 'styled-components';
@@ -17,7 +17,7 @@ export default function Mission({
     },
     error,
     loading
-  } = useQuery(query, {
+  } = useQuery<GetMission.Query, GetMission.Variables>(query, {
     variables: {
       id
     }
