@@ -1167,6 +1167,13 @@ address@1.0.3, address@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/address/-/address-1.0.3.tgz#b5f50631f8d6cec8bd20c963963afb55e06cbce9"
 
+aggregate-error@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-2.1.0.tgz#051a9a733ad2e95ab503d84fb81989e6419b8f09"
+  dependencies:
+    clean-stack "^2.0.0"
+    indent-string "^3.0.0"
+
 ajv-errors@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"
@@ -2292,6 +2299,10 @@ clean-css@4.2.x:
   dependencies:
     source-map "~0.6.0"
 
+clean-stack@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.0.0.tgz#301bfa9e8dd2d3d984c0e542f7aa67b996f63e0a"
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -2979,6 +2990,10 @@ deep-is@~0.1.3:
 deepmerge@3.1.0, deepmerge@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.1.0.tgz#a612626ce4803da410d77554bfd80361599c034d"
+
+deepmerge@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.2.0.tgz#58ef463a57c08d376547f8869fdc5bcee957f44e"
 
 default-gateway@^2.6.0:
   version "2.7.2"
@@ -4287,6 +4302,19 @@ graphql-codegen-core@0.16.1:
     ts-log "2.1.4"
     winston "3.2.1"
 
+graphql-codegen-core@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.18.0.tgz#4ddeae8b0ee06041d255b5f6e55e6f48ca9ca316"
+  dependencies:
+    chalk "2.4.2"
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    graphql-tag "2.10.1"
+    graphql-toolkit "0.2.0"
+    graphql-tools "4.0.4"
+    ts-log "2.1.4"
+    winston "3.2.1"
+
 graphql-codegen-plugin-helpers@0.16.1:
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/graphql-codegen-plugin-helpers/-/graphql-codegen-plugin-helpers-0.16.1.tgz#fa9f2d73b30a63f7db3cc7d1748fc419a679c160"
@@ -4294,13 +4322,20 @@ graphql-codegen-plugin-helpers@0.16.1:
     graphql-codegen-core "0.16.1"
     import-from "2.1.0"
 
-graphql-codegen-typescript-client@0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-client/-/graphql-codegen-typescript-client-0.16.1.tgz#d1fe82ed4d254244186a6c0b7da4795c2917319c"
+graphql-codegen-plugin-helpers@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-plugin-helpers/-/graphql-codegen-plugin-helpers-0.18.0.tgz#2502c35e6ae790d761be2126e8743fc1a7310f6f"
   dependencies:
-    graphql-codegen-core "0.16.1"
-    graphql-codegen-plugin-helpers "0.16.1"
-    graphql-codegen-typescript-common "0.16.1"
+    graphql-codegen-core "0.18.0"
+    import-from "2.1.0"
+
+graphql-codegen-typescript-client@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-client/-/graphql-codegen-typescript-client-0.18.0.tgz#efce9762455b186ac5e50e4dfec3250d0299da51"
+  dependencies:
+    graphql-codegen-core "0.18.0"
+    graphql-codegen-plugin-helpers "0.18.0"
+    graphql-codegen-typescript-common "0.18.0"
 
 graphql-codegen-typescript-common@0.16.1:
   version "0.16.1"
@@ -4310,6 +4345,15 @@ graphql-codegen-typescript-common@0.16.1:
     common-tags "1.8.0"
     graphql-codegen-core "0.16.1"
     graphql-codegen-plugin-helpers "0.16.1"
+
+graphql-codegen-typescript-common@0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-typescript-common/-/graphql-codegen-typescript-common-0.18.0.tgz#f0b7121e6d7acdf4568630cefc4ddd413621405e"
+  dependencies:
+    change-case "3.1.0"
+    common-tags "1.8.0"
+    graphql-codegen-core "0.18.0"
+    graphql-codegen-plugin-helpers "0.18.0"
 
 graphql-config@2.2.1:
   version "2.2.1"
@@ -4344,6 +4388,16 @@ graphql-tag-pluck@0.5.0:
     source-map-support "^0.5.9"
     typescript "^3.2.2"
 
+graphql-tag-pluck@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/graphql-tag-pluck/-/graphql-tag-pluck-0.6.0.tgz#d03ab981cd8d31e564d37f8b9bac94a523dc29dd"
+  dependencies:
+    "@babel/parser" "^7.2.0"
+    "@babel/traverse" "^7.1.6"
+    "@babel/types" "^7.2.0"
+    source-map-support "^0.5.9"
+    typescript "^3.2.2"
+
 graphql-tag@2.10.1, graphql-tag@^2.4.2:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.1.tgz#10aa41f1cd8fae5373eaf11f1f67260a3cad5e02"
@@ -4360,6 +4414,22 @@ graphql-toolkit@0.0.5:
     is-valid-path "0.1.1"
     lodash "4.17.11"
     request "2.88.0"
+    valid-url "1.0.9"
+
+graphql-toolkit@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.2.0.tgz#91364b69911d51bc915269a37963f4ea2d5f335c"
+  dependencies:
+    aggregate-error "2.1.0"
+    deepmerge "3.2.0"
+    glob "7.1.3"
+    graphql-import "0.7.1"
+    graphql-tag-pluck "0.6.0"
+    is-glob "4.0.0"
+    is-valid-path "0.1.1"
+    lodash "4.17.11"
+    request "2.88.0"
+    tslib "^1.9.3"
     valid-url "1.0.9"
 
 graphql-tools@4.0.4:
