@@ -872,10 +872,6 @@
   dependencies:
     moment "*"
 
-"@types/node@*":
-  version "11.9.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.4.tgz#ceb0048a546db453f6248f2d1d95e937a6f00a14"
-
 "@types/node@10.12.24":
   version "10.12.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.24.tgz#b13564af612a22a20b5d95ca40f1bffb3af315cf"
@@ -896,6 +892,13 @@
   version "16.8.0"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.8.0.tgz#c565f43f9d2ec911f9e0b8f3b74e25e67879aa3f"
   dependencies:
+    "@types/react" "*"
+
+"@types/react-native@*":
+  version "0.57.38"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.38.tgz#2ff6ed1a7cc207afbfd87bf496513d96931d1446"
+  dependencies:
+    "@types/prop-types" "*"
     "@types/react" "*"
 
 "@types/react-paginate@6.2.1":
@@ -955,12 +958,12 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/styled-components@4.1.8":
-  version "4.1.8"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.8.tgz#15c8a53bb4b9066e528fafb7558963dee5690ae0"
+"@types/styled-components@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.11.tgz#1bd97988a69be550ef8a967b87827ff943f21c4e"
   dependencies:
-    "@types/node" "*"
     "@types/react" "*"
+    "@types/react-native" "*"
     csstype "^2.2.0"
 
 "@types/tapable@1.0.2":
