@@ -1,0 +1,10 @@
+schema: https://api.spacex.land/graphql
+documents:
+  - src/**/*.tsx
+overwrite: true
+watch: true
+generates:
+  ./src/types/types.d.ts:
+    plugins:
+      - typescript-common
+      - typescript-client
