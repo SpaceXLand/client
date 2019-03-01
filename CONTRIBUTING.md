@@ -1,6 +1,6 @@
-# Contributing to SpaceX Land API
+# Contributing to SpaceX Land Client
 
-We would love for you to contribute to SpaceX Land API and help make it even better
+We would love for you to contribute to SpaceX Land Client and help make it even better
 than it is today! As a contributor, here are the guidelines we would like you
 to follow:
 
@@ -48,7 +48,8 @@ Before you submit an issue, please search the issue tracker, maybe an issue for 
 
 We want to fix all the issues as soon as possible, but before fixing a bug we need to reproduce and confirm it. Having a reproducible scenario gives us wealth of important information without going back & forth to you with additional questions like:
 
-- branch of SpaceX Land API used
+
+- branch of SpaceX Land Client used
 - 3rd-party libraries and their versions
 - and most importantly - a use-case that fails
 
