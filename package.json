@@ -42,7 +42,7 @@
     "@types/history": "4.7.2",
     "@types/lodash": "4.14.121",
     "@types/moment": "2.13.0",
-    "@types/node": "10.12.24",
+    "@types/node": "10.12.29",
     "@types/react": "16.8.2",
     "@types/react-dom": "16.8.0",
     "@types/react-paginate": "6.2.1",
