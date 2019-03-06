@@ -18,7 +18,7 @@
     "@material-ui/icons": "^3.0.2",
     "@material-ui/styles": "^3.0.0-alpha.10",
     "apollo-boost": "^0.1.27",
-    "fork-ts-checker-webpack-plugin": "^0.5.2",
+    "fork-ts-checker-webpack-plugin": "^1.0.0",
     "graphql": "14.1.1",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
