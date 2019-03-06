@@ -53,9 +53,9 @@
     "@types/uniqid": "4.1.2",
     "concurrently": "4.1.0",
     "graphql": "14.1.1",
-    "graphql-code-generator": "0.16.1",
-    "graphql-codegen-typescript-client": "0.16.1",
-    "graphql-codegen-typescript-common": "0.16.1",
+    "graphql-code-generator": "0.18.0",
+    "graphql-codegen-typescript-client": "0.18.0",
+    "graphql-codegen-typescript-common": "0.18.0",
     "nodemon": "1.18.9",
     "ts-node": "8.0.2"
   },
