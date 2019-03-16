@@ -2,7 +2,10 @@ import * as React from 'react';
 import { Suspense } from 'react';
 import { ApolloProvider } from 'react-apollo-hooks';
 import * as ReactDOM from 'react-dom';
-import ApolloClient from 'apollo-boost';
+import { createPersistedQueryLink } from 'apollo-link-persisted-queries';
+import { createHttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import ApolloClient from 'apollo-client';
 import App from './app';
 import { ThemeProvider } from 'styled-components';
 import registerServiceWorker from './utils/registerServiceWorker';
@@ -13,7 +16,10 @@ import { Router, Route, Redirect, Switch } from 'react-router-dom';
 import history from './utils/history';
 
 const client = new ApolloClient({
-  uri: 'https://api.spacex.land/graphql'
+  cache: new InMemoryCache(),
+  link: createPersistedQueryLink().concat(
+    createHttpLink({ uri: 'https://api.spacex.land/graphql' })
+  )
 });
 
 ReactDOM.render(
