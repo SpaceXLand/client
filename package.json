@@ -30,7 +30,7 @@
     "react-dom": "16.8.4",
     "react-fast-compare": "2.0.4",
     "react-paginate": "^6.2.1",
-    "react-router-dom": "4.4.0",
+    "react-router-dom": "4.4.0-beta.8",
     "react-router-transition": "1.3.0",
     "react-scripts": "2.1.8",
     "react-search-field": "^1.0.0",
