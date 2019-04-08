@@ -52,7 +52,7 @@
     "@types/react-router-dom": "4.3.1",
     "@types/react-slick": "0.23.3",
     "@types/slick-carousel": "1.6.33",
-    "@types/styled-components": "4.1.12",
+    "@types/styled-components": "4.1.13",
     "@types/uniqid": "4.1.2",
     "concurrently": "4.1.0",
     "graphql": "14.2.1",

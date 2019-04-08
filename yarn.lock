@@ -1171,9 +1171,9 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/styled-components@4.1.12":
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.12.tgz#62c19bd1aa37b1a904d36c179a0fec66c24ac99c"
+"@types/styled-components@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.1.13.tgz#7373e0a084dedf6982a35d5bc2ef07e023e18e2e"
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
