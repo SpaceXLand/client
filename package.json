@@ -60,7 +60,7 @@
     "graphql-codegen-typescript-client": "0.18.1",
     "graphql-codegen-typescript-common": "0.18.1",
     "nodemon": "1.19.0",
-    "ts-node": "8.1.0"
+    "ts-node": "8.1.1"
   },
   "resolutions": {
     "babel-loader": "8.0.4"
