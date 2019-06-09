@@ -50,7 +50,7 @@
     "@types/react-dom": "16.8.4",
     "@types/react-paginate": "6.2.1",
     "@types/react-router-dom": "4.3.3",
-    "@types/react-slick": "0.23.3",
+    "@types/react-slick": "0.23.4",
     "@types/slick-carousel": "1.6.33",
     "@types/styled-components": "4.1.15",
     "@types/uniqid": "4.1.2",
