@@ -41,7 +41,7 @@
     "uniqid": "5.0.3"
   },
   "devDependencies": {
-    "@types/graphql": "14.2.0",
+    "@types/graphql": "14.2.1",
     "@types/history": "4.7.2",
     "@types/lodash": "4.14.134",
     "@types/moment": "2.13.0",
