@@ -6387,14 +6387,7 @@ js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@3.13.1, js-yaml@^3.10.0, js-yaml@^3.12.0, js-yaml@^3.9.0:
-  version "3.13.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
-js-yaml@^3.13.0:
+js-yaml@3.13.1, js-yaml@^3.10.0, js-yaml@^3.12.0, js-yaml@^3.13.0, js-yaml@^3.9.0:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   dependencies:
@@ -8938,9 +8931,9 @@ react-search-field@^1.0.0:
     react-dom "16.6.3"
     typeco "1.0.0"
 
-react-slick@^0.24.0:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.24.0.tgz#1a4e078a82de4e9458255d9ce26aa6f3b17b168b"
+react-slick@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.25.0.tgz#1f460e0ad2437edc5858f5f19e87c54064e7a0ab"
   dependencies:
     classnames "^2.2.5"
     enquire.js "^2.1.6"
