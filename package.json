@@ -22,7 +22,7 @@
     "apollo-link-http": "^1.5.14",
     "apollo-link-persisted-queries": "^0.2.2",
     "fork-ts-checker-webpack-plugin": "^1.0.0",
-    "graphql": "14.3.1",
+    "graphql": "14.4.2",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
     "react": "16.9.0",
@@ -41,7 +41,7 @@
     "uniqid": "5.0.3"
   },
   "devDependencies": {
-    "@types/graphql": "14.2.1",
+    "@types/graphql": "14.2.3",
     "@types/history": "4.7.2",
     "@types/lodash": "4.14.136",
     "@types/moment": "2.13.0",
@@ -55,7 +55,7 @@
     "@types/styled-components": "4.1.15",
     "@types/uniqid": "4.1.2",
     "concurrently": "4.1.1",
-    "graphql": "14.3.1",
+    "graphql": "14.4.2",
     "graphql-code-generator": "0.18.2",
     "graphql-codegen-typescript-client": "0.18.2",
     "graphql-codegen-typescript-common": "0.18.2",
