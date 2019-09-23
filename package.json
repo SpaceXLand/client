@@ -36,7 +36,7 @@
     "react-search-field": "^1.0.0",
     "react-slick": "^0.25.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "4.3.2",
+    "styled-components": "4.4.0",
     "styled-media-query": "^2.1.1",
     "uniqid": "5.0.3"
   },
@@ -52,7 +52,7 @@
     "@types/react-router-dom": "4.3.5",
     "@types/react-slick": "0.23.4",
     "@types/slick-carousel": "1.6.33",
-    "@types/styled-components": "4.1.18",
+    "@types/styled-components": "4.1.19",
     "@types/uniqid": "4.1.2",
     "concurrently": "4.1.2",
     "graphql": "14.5.0",
