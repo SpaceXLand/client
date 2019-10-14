@@ -59,7 +59,7 @@
     "graphql-code-generator": "0.18.2",
     "graphql-codegen-typescript-client": "0.18.2",
     "graphql-codegen-typescript-common": "0.18.2",
-    "nodemon": "1.19.1",
+    "nodemon": "1.19.3",
     "ts-node": "8.3.0"
   },
   "resolutions": {
