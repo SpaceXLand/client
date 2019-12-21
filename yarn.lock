@@ -1655,9 +1655,9 @@
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
 
-"@types/slick-carousel@1.6.33":
-  version "1.6.33"
-  resolved "https://registry.yarnpkg.com/@types/slick-carousel/-/slick-carousel-1.6.33.tgz#473cd8dffb73a7a7965aee119dd256b857ce3683"
+"@types/slick-carousel@1.6.34":
+  version "1.6.34"
+  resolved "https://registry.yarnpkg.com/@types/slick-carousel/-/slick-carousel-1.6.34.tgz#ac8aa7c3175070baca9477c353724542a8ed74f7"
   dependencies:
     "@types/jquery" "*"
 
