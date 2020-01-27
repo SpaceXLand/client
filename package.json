@@ -54,7 +54,7 @@
     "@types/slick-carousel": "1.6.34",
     "@types/styled-components": "4.1.19",
     "@types/uniqid": "4.1.2",
-    "concurrently": "4.1.2",
+    "concurrently": "5.1.0",
     "graphql": "14.5.8",
     "graphql-code-generator": "0.18.2",
     "graphql-codegen-typescript-client": "0.18.2",
