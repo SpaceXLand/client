@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@types/graphql": "14.2.3",
-    "@types/history": "4.7.3",
+    "@types/history": "4.7.5",
     "@types/lodash": "4.14.144",
     "@types/moment": "2.13.0",
     "@types/node": "10.14.21",
