@@ -28,7 +28,7 @@
     "react": "16.10.2",
     "react-apollo-hooks": "0.5.0",
     "react-dom": "16.10.2",
-    "react-fast-compare": "2.0.4",
+    "react-fast-compare": "3.0.1",
     "react-paginate": "^6.2.1",
     "react-router-dom": "5.1.2",
     "react-router-transition": "1.4.0",
