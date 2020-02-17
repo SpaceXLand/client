@@ -1,6 +1,6 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { GetMissions } from '../../types/types';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,31 +10,34 @@ export default function Missions({
   limit,
   offset,
   match,
-  setTotalCount
+  setTotalCount,
 }: RouteComponentProps & any) {
-  const {
-    data: {
-      missionsResult: {
-        data,
-        result: { totalCount }
-      }
-    },
-    error
-  } = useQuery<GetMissions.Query, GetMissions.Variables>(query, {
+  const { data, error, loading } = useQuery<
+    GetMissions.Query,
+    GetMissions.Variables
+  >(query, {
     variables: {
       name,
       limit,
-      offset
-    }
+      offset,
+    },
   });
+
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error}</span>;
+
+  const {
+    missionsResult: {
+      data: missions,
+      result: { totalCount },
+    },
+  } = data;
 
   setTotalCount(totalCount);
 
-  return error ? (
-    <span>{error}</span>
-  ) : (
+  return (
     <Container>
-      {data.map(({ id, name }) => (
+      {missions.map(({ id, name }) => (
         <div key={id}>
           <LinkStyled to={`${match.path}/${id}`}>🎯 {name}</LinkStyled>
         </div>

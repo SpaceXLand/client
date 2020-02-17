@@ -1,6 +1,6 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { GetLaunch, GetLaunches } from '../../types/types';
 import { RouteComponentProps } from 'react-router-dom';
 import Slider from 'react-slick';
@@ -8,26 +8,26 @@ import styled from 'styled-components';
 
 export default function Launch({
   match: {
-    params: { id }
-  }
+    params: { id },
+  },
 }: RouteComponentProps<{ id: string }>) {
-  const {
-    data: {
-      launch: { name, date, details, success, rocket, links }
-    },
-    error,
-    loading
-  } = useQuery<GetLaunch.Query, GetLaunch.Variables>(query, {
+  const { data, error, loading } = useQuery<
+    GetLaunch.Query,
+    GetLaunch.Variables
+  >(query, {
     variables: {
-      id
-    }
+      id,
+    },
   });
 
-  return error ? (
-    <span>{error.message}</span>
-  ) : loading ? (
-    <span>Loading...</span>
-  ) : (
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error}</span>;
+
+  const {
+    launch: { name, date, details, success, rocket, links },
+  } = data;
+
+  return (
     <Container>
       <h2>🛰 {name}</h2>
       <h4>
@@ -37,7 +37,7 @@ export default function Launch({
       <h5>Success {success ? '✅' : '❌'}</h5>
       <SliderStyled {...settings}>
         {links.images.map((src, index) => (
-          <img key={index} src={src} />
+          <img key={index} src={src} alt="launch" />
         ))}
       </SliderStyled>
     </Container>
@@ -67,7 +67,7 @@ const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
 };
 
 const Container = styled.div`

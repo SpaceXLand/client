@@ -1,6 +1,6 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { GetRockets } from '../../types/types';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,30 +10,33 @@ export default function Launches({
   limit,
   offset,
   match,
-  setTotalCount
+  setTotalCount,
 }: RouteComponentProps & any) {
-  const {
-    data: {
-      rocketsResult: {
-        data,
-        result: { totalCount }
-      }
-    },
-    error
-  } = useQuery<GetRockets.Query, GetRockets.Variables>(query, {
+  const { data, error, loading } = useQuery<
+    GetRockets.Query,
+    GetRockets.Variables
+  >(query, {
     variables: {
       limit,
-      offset
-    }
+      offset,
+    },
   });
+
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error.message}</span>;
+
+  const {
+    rocketsResult: {
+      data: rockets,
+      result: { totalCount },
+    },
+  } = data;
 
   setTotalCount(totalCount);
 
-  return error ? (
-    <span>{error}</span>
-  ) : (
+  return (
     <Container>
-      {data.map(({ id, name }) => (
+      {rockets.map(({ id, name }) => (
         <div key={id}>
           <LinkStyled to={`${match.path}/${id}`}>🚀 {name}</LinkStyled>
         </div>
