@@ -18,7 +18,7 @@ import history from './utils/history';
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: createPersistedQueryLink().concat(
-    createHttpLink({ uri: 'https://api.spacex.land/graphql' })
+    createHttpLink({ uri: 'http://localhost:4000/graphql' })
   )
 });
 
