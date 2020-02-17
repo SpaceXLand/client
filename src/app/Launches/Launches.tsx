@@ -10,31 +10,34 @@ export default function Launches({
   limit,
   offset,
   match,
-  setTotalCount
+  setTotalCount,
 }: RouteComponentProps & any) {
-  const {
-    data: {
-      launchesPastResult: {
-        data,
-        result: { totalCount }
-      }
-    },
-    error
-  } = useQuery<GetLaunches.Query, GetLaunches.Variables>(query, {
+  const { data, loading, error } = useQuery<
+    GetLaunches.Query,
+    GetLaunches.Variables
+  >(query, {
     variables: {
       name,
       limit,
-      offset
-    }
+      offset,
+    },
   });
+
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error}</span>;
+
+  const {
+    launchesPastResult: {
+      data: launchesPast,
+      result: { totalCount },
+    },
+  } = data;
 
   setTotalCount(totalCount);
 
-  return error ? (
-    <span>{error}</span>
-  ) : (
+  return (
     <Container>
-      {data.map(({ id, mission_name }) => (
+      {launchesPast.map(({ id, mission_name }) => (
         <div key={id}>
           <LinkStyled to={`${match.path}/${id}`}>🛰 {mission_name}</LinkStyled>
         </div>

@@ -8,26 +8,26 @@ import styled from 'styled-components';
 
 export default function Ship({
   match: {
-    params: { id }
-  }
+    params: { id },
+  },
 }: RouteComponentProps<{ id: string }>) {
-  const {
-    data: {
-      ship: { name, port, image }
+  const { data, error, loading } = useQuery<GetShip.Query, GetShip.Variables>(
+    query,
+    {
+      variables: {
+        id,
+      },
     },
-    error,
-    loading
-  } = useQuery<GetShip.Query, GetShip.Variables>(query, {
-    variables: {
-      id
-    }
-  });
+  );
 
-  return error ? (
-    <span>{error.message}</span>
-  ) : loading ? (
-    <span>Loading...</span>
-  ) : (
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error.message}</span>;
+
+  const {
+    ship: { name, port, image },
+  } = data;
+
+  return (
     <Container>
       <h2>🛰 {name}</h2>
       <Details>{port}</Details>

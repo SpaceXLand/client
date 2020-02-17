@@ -1,5 +1,108 @@
 export type Maybe<T> = T | null;
 
+/** ordering options when selecting data from "users" */
+export interface UsersOrderBy {
+  id?: Maybe<OrderBy>;
+
+  name?: Maybe<OrderBy>;
+
+  rocket?: Maybe<OrderBy>;
+
+  timestamp?: Maybe<OrderBy>;
+
+  twitter?: Maybe<OrderBy>;
+}
+/** Boolean expression to filter rows from the table "users". All fields are combined with a logical 'AND'. */
+export interface UsersBoolExp {
+  _and?: Maybe<(Maybe<UsersBoolExp>)[]>;
+
+  _not?: Maybe<UsersBoolExp>;
+
+  _or?: Maybe<(Maybe<UsersBoolExp>)[]>;
+
+  id?: Maybe<UuidComparisonExp>;
+
+  name?: Maybe<StringComparisonExp>;
+
+  rocket?: Maybe<StringComparisonExp>;
+
+  timestamp?: Maybe<TimestamptzComparisonExp>;
+
+  twitter?: Maybe<StringComparisonExp>;
+}
+/** expression to compare columns of type uuid. All fields are combined with logical 'AND'. */
+export interface UuidComparisonExp {
+  _eq?: Maybe<Uuid>;
+
+  _gt?: Maybe<Uuid>;
+
+  _gte?: Maybe<Uuid>;
+
+  _in?: Maybe<Uuid[]>;
+
+  _is_null?: Maybe<boolean>;
+
+  _lt?: Maybe<Uuid>;
+
+  _lte?: Maybe<Uuid>;
+
+  _neq?: Maybe<Uuid>;
+
+  _nin?: Maybe<Uuid[]>;
+}
+/** expression to compare columns of type String. All fields are combined with logical 'AND'. */
+export interface StringComparisonExp {
+  _eq?: Maybe<string>;
+
+  _gt?: Maybe<string>;
+
+  _gte?: Maybe<string>;
+
+  _ilike?: Maybe<string>;
+
+  _in?: Maybe<string[]>;
+
+  _is_null?: Maybe<boolean>;
+
+  _like?: Maybe<string>;
+
+  _lt?: Maybe<string>;
+
+  _lte?: Maybe<string>;
+
+  _neq?: Maybe<string>;
+
+  _nilike?: Maybe<string>;
+
+  _nin?: Maybe<string[]>;
+
+  _nlike?: Maybe<string>;
+
+  _nsimilar?: Maybe<string>;
+
+  _similar?: Maybe<string>;
+}
+/** expression to compare columns of type timestamptz. All fields are combined with logical 'AND'. */
+export interface TimestamptzComparisonExp {
+  _eq?: Maybe<Timestamptz>;
+
+  _gt?: Maybe<Timestamptz>;
+
+  _gte?: Maybe<Timestamptz>;
+
+  _in?: Maybe<Timestamptz[]>;
+
+  _is_null?: Maybe<boolean>;
+
+  _lt?: Maybe<Timestamptz>;
+
+  _lte?: Maybe<Timestamptz>;
+
+  _neq?: Maybe<Timestamptz>;
+
+  _nin?: Maybe<Timestamptz[]>;
+}
+
 export interface CapsulesFind {
   id?: Maybe<string>;
 
@@ -271,6 +374,114 @@ export interface ShipsFind {
 
   mission?: Maybe<string>;
 }
+/** input type for inserting data into table "users" */
+export interface UsersInsertInput {
+  id?: Maybe<Uuid>;
+
+  name?: Maybe<string>;
+
+  rocket?: Maybe<string>;
+
+  timestamp?: Maybe<Timestamptz>;
+
+  twitter?: Maybe<string>;
+}
+/** on conflict condition type for table "users" */
+export interface UsersOnConflict {
+  constraint: UsersConstraint;
+
+  update_columns: UsersUpdateColumn[];
+}
+/** input type for updating data in table "users" */
+export interface UsersSetInput {
+  id?: Maybe<Uuid>;
+
+  name?: Maybe<string>;
+
+  rocket?: Maybe<string>;
+
+  timestamp?: Maybe<Timestamptz>;
+
+  twitter?: Maybe<string>;
+}
+/** order by aggregate values of table "users" */
+export interface UsersAggregateOrderBy {
+  count?: Maybe<OrderBy>;
+
+  max?: Maybe<UsersMaxOrderBy>;
+
+  min?: Maybe<UsersMinOrderBy>;
+}
+/** order by max() on columns of table "users" */
+export interface UsersMaxOrderBy {
+  name?: Maybe<OrderBy>;
+
+  rocket?: Maybe<OrderBy>;
+
+  timestamp?: Maybe<OrderBy>;
+
+  twitter?: Maybe<OrderBy>;
+}
+/** order by min() on columns of table "users" */
+export interface UsersMinOrderBy {
+  name?: Maybe<OrderBy>;
+
+  rocket?: Maybe<OrderBy>;
+
+  timestamp?: Maybe<OrderBy>;
+
+  twitter?: Maybe<OrderBy>;
+}
+/** input type for inserting array relation for remote table "users" */
+export interface UsersArrRelInsertInput {
+  data: UsersInsertInput[];
+
+  on_conflict?: Maybe<UsersOnConflict>;
+}
+/** input type for inserting object relation for remote table "users" */
+export interface UsersObjRelInsertInput {
+  data: UsersInsertInput;
+
+  on_conflict?: Maybe<UsersOnConflict>;
+}
+/** select columns of table "users" */
+export enum UsersSelectColumn {
+  Id = "id",
+  Name = "name",
+  Rocket = "rocket",
+  Timestamp = "timestamp",
+  Twitter = "twitter"
+}
+/** column ordering options */
+export enum OrderBy {
+  Asc = "asc",
+  AscNullsFirst = "asc_nulls_first",
+  AscNullsLast = "asc_nulls_last",
+  Desc = "desc",
+  DescNullsFirst = "desc_nulls_first",
+  DescNullsLast = "desc_nulls_last"
+}
+/** unique or primary key constraints on table "users" */
+export enum UsersConstraint {
+  UsersPkey = "users_pkey"
+}
+/** update columns of table "users" */
+export enum UsersUpdateColumn {
+  Id = "id",
+  Name = "name",
+  Rocket = "rocket",
+  Timestamp = "timestamp",
+  Twitter = "twitter"
+}
+/** conflict action */
+export enum ConflictAction {
+  Ignore = "ignore",
+  Update = "update"
+}
+
+export type Uuid = any;
+
+export type Timestamptz = any;
 
 export type Date = any;
 

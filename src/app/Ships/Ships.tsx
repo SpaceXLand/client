@@ -10,31 +10,31 @@ export default function Launches({
   limit,
   offset,
   match,
-  setTotalCount
+  setTotalCount,
 }: RouteComponentProps & any) {
-  const {
-    data: {
-      shipsResult: {
-        data,
-        result: { totalCount }
-      }
-    },
-    error
-  } = useQuery<GetShips.Query>(query, {
+  const { data, error, loading } = useQuery<GetShips.Query>(query, {
     variables: {
       name,
       limit,
-      offset
-    }
+      offset,
+    },
   });
+
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error.message}</span>;
+
+  const { shipsResult } = data || {};
+
+  const {
+    data: ships,
+    result: { totalCount },
+  } = shipsResult || {};
 
   setTotalCount(totalCount);
 
-  return error ? (
-    <span>{error}</span>
-  ) : (
+  return (
     <Container>
-      {data.map(({ id, name }) => (
+      {ships.map(({ id, name }) => (
         <div key={id}>
           <LinkStyled to={`${match.path}/${id}`}>⛴ {name}</LinkStyled>
         </div>

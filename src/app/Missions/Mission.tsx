@@ -8,26 +8,26 @@ import styled from 'styled-components';
 
 export default function Mission({
   match: {
-    params: { id }
-  }
+    params: { id },
+  },
 }: RouteComponentProps<{ id: string }>) {
-  const {
-    data: {
-      mission: { name, description, manufacturers, twitter, website, wikipedia }
-    },
-    error,
-    loading
-  } = useQuery<GetMission.Query, GetMission.Variables>(query, {
+  const { data, error, loading } = useQuery<
+    GetMission.Query,
+    GetMission.Variables
+  >(query, {
     variables: {
-      id
-    }
+      id,
+    },
   });
 
-  return error ? (
-    <span>{error.message}</span>
-  ) : loading ? (
-    <span>Loading...</span>
-  ) : (
+  if (loading) return <span>Loading...</span>;
+  if (error) return <span>{error}</span>;
+
+  const {
+    mission: { name, description, manufacturers, twitter, website, wikipedia },
+  } = data;
+
+  return (
     <Container>
       <h2>🎯 {name}</h2>
       <Details>{description}</Details>
@@ -53,7 +53,7 @@ const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
 };
 
 const Container = styled.div`
