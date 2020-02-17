@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Suspense } from 'react';
-import { ApolloProvider } from 'react-apollo-hooks';
+import { ApolloProvider } from '@apollo/react-hooks';
 import * as ReactDOM from 'react-dom';
 import { createPersistedQueryLink } from 'apollo-link-persisted-queries';
 import { createHttpLink } from 'apollo-link-http';
@@ -18,8 +18,8 @@ import history from './utils/history';
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: createPersistedQueryLink().concat(
-    createHttpLink({ uri: 'http://localhost:4000/graphql' })
-  )
+    createHttpLink({ uri: 'https://api.spacex.land/graphql' }),
+  ),
 });
 
 ReactDOM.render(
@@ -36,7 +36,7 @@ ReactDOM.render(
       </Router>
     </ApolloProvider>
   </ThemeProvider>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 
 registerServiceWorker();

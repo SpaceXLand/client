@@ -1,6 +1,6 @@
 import * as React from 'react';
 import gql from 'graphql-tag';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { GetLaunch, GetLaunches, GetShips, GetShip } from '../../types/types';
 import { RouteComponentProps } from 'react-router-dom';
 import Slider from 'react-slick';
