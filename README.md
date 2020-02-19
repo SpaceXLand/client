@@ -52,6 +52,19 @@ This project has adopted the [Contributor Covenant Code of Conduct](https://www.
 
 Join our [Spectrum community](https://spectrum.chat/spacexland) if you run into issues or have questions. We love talking to you!
 
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars.githubusercontent.com/u/9881700?v=3" width="100px;"/><br /><sub><b>Carlos Rufo</b></sub>](https://github.com/swcarlosrj)<br />[💬](#question-swcarlosrj "Answering Questions")[💻](https://github.com/spacexland/api/commits?author=swcarlosrj "Code")[👀](#review-swcarlosrj "Reviewed Pull Requests")[📢](#talk-swcarlosrj "Talks") | [<img src="https://avatars0.githubusercontent.com/u/449240?v=4" width="100px;"/><br /><sub><b>Polchompunoot Thongtaem</b></sub>](http://github.com/pthongtaem)<br />[💻](https://github.com/spacexland/api/commits?author=pthongtaem "Code")[👀](#review-pthongtaem "Reviewed Pull Requests") |  |
+| :---: | :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
+Contributions of any kind are welcome!
+
 ## License
 
 SpaceX Land API is MIT licensed, as found in the [LICENSE](https://github.com/spacexland/client/blob/master/LICENSE) file.
