@@ -63,7 +63,7 @@
     "ts-node": "8.6.2"
   },
   "resolutions": {
-    "babel-loader": "8.0.4"
+    "babel-loader": "8.0.6"
   },
   "eslintConfig": {
     "extends": "react-app"
