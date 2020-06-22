@@ -1600,10 +1600,10 @@
     "@types/react-native" "*"
     csstype "^2.2.0"
 
-"@types/uniqid@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@types/uniqid/-/uniqid-4.1.3.tgz#db256fb3e7717e9e4c292a5cfd12cb9e0e6d0ffa"
-  integrity sha512-MZIMT54byy2Oqjf+fk4xI13JuMe/cWbXxAGz99LvvCmpZVErKO7W+7XYVXSy+zKRwvc1hbyDCMvzBW/fhMDeTw==
+"@types/uniqid@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@types/uniqid/-/uniqid-5.2.0.tgz#040674219cffe16ca035c820c2581012e6eb11e5"
+  integrity sha512-ZBIIQJj0y49rgMfWDEr3miyNhOxyfhvf5/1VVbLObJpfkdGl0Vj2J8qENWwfT2W9OBq5FhwtnJ3nTs2dnY3w2A==
 
 "@types/valid-url@1.0.2":
   version "1.0.2"
