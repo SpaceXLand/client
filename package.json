@@ -19,7 +19,7 @@
     "@material-ui/icons": "^3.0.2",
     "@material-ui/styles": "^3.0.0-alpha.10",
     "apollo-cache-inmemory": "^1.6.5",
-    "apollo-client": "^2.6.8",
+    "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.16",
     "apollo-link-persisted-queries": "^0.2.2",
     "fork-ts-checker-webpack-plugin": "^5.0.9",
