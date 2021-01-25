@@ -34,7 +34,7 @@
     "react-router-transition": "2.0.0",
     "react-scripts": "3.4.0",
     "react-search-field": "^1.0.0",
-    "react-slick": "^0.26.1",
+    "react-slick": "^0.28.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "5.0.1",
     "styled-media-query": "^2.1.2",
