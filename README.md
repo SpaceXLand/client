@@ -10,7 +10,7 @@
 <img src="https://media.giphy.com/media/3o72FkiKGMGauydfyg/giphy.gif"/>
 </p>
 
-## Buil cool 🚀 stuff
+## Build cool 🚀 stuff
 
 It was never easier to create & share 💯web application projects using your favs FE libraries. Whether you're starting with GraphQL or not, give a 👀at the differents **live examples**, you could discover interesting things!
 
